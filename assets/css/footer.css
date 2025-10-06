@@ -1,0 +1,145 @@
+.main_footer{
+  background-color: black;
+    padding: 30px 40px;
+    justify-content: space-evenly;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    width: 100%;
+}
+.first_box{
+    margin-top: 4px;
+}
+
+.first_box h1{
+  font-size: 15px;
+  font-weight: 700;
+  color: #fdd835;
+  margin-top: 20px;
+   font-family: var(--font);
+}
+.first_box h2 a{
+    font-family: "godber";
+ text-decoration: none;
+ color: white;
+}
+
+.first_box ul li{
+  color: white;
+  margin-top: 12px;
+  font-size: 12px;
+  font-family: var(--font);
+}
+.first_box ul{
+  margin-top: 20px;
+}
+ .first_box ul li{
+  list-style: none;
+}
+.svg_one{
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.svg_one p{
+ color: white;
+}
+.svg_two{
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.svg_two p{
+ color: white;
+  font-family: var(--font);
+}
+.secound_box h1{
+ color: #fdd835;
+ font-size: 15px;
+ font-weight: 700;
+ margin-bottom: 20px;
+  font-family: var(--font);
+}
+.secound_box ul li{
+  color: white;
+  list-style: none;
+  margin-bottom: 10px;
+   font-family: var(--font);
+}
+.secound_box{
+  margin-top: 60px;
+}
+.third_box h1{
+  color: #fdd835;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20PX;
+   font-family: var(--font);
+}
+.third_box{
+  margin-top: 60PX;
+  padding-left: 50px;
+}
+.social_media{
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.social_media p{
+  color: white;
+   font-family: var(--font);
+}
+.social_media2{
+   display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.social_media2 p{
+  color: white;
+   font-family: var(--font);
+}
+.icon_img{
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+.bottom_side{
+  margin-top: 20px;
+}
+.third_box img{
+  width: 220px;
+  height: 20px;
+  margin-top: 10px;
+}
+.last_box{
+  margin-top: 60px;
+
+}
+.last_box input{
+    height: 35px;
+    outline: none;
+    border-bottom: 2px solid var(--primary-color) ;
+    background-color: rgba(0, 0, 0, 0.801);
+ 
+    
+}
+
+.last_box h1{
+color: #fdd835;
+font-size: 20px;
+margin-bottom: 20px;
+ font-family: var(--font);
+}
+.last_box button{
+  background-color: #fdd835;
+  color: black;
+  height: 35px;
+  width: 150px;
+  border: none;
+}
+
+@media screen and (max-width: 1024px){
+    .main_footer{
+        display: none;
+    }
+}
