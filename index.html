@@ -1,13 +1,1270 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DBI Clothing </title>
+  <link rel="stylesheet" href="/assets/css/home.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/product.css">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
 </head>
+
 <body>
-    <script> 
-        window.location.href="/pages/home.html";
-    </script>
+
+  <!-- Loader -->
+  <div id="loader" class="loader" style="display: none;">
+    <img src="/assets/images/page loader.gif" alt="" height="100px">
+  </div>
+
+  <div id="headers_fixed" style="position: fixed; top: 0px; background-color: white; z-index: 40; width: 100%;">
+    <div class="nav">
+      <div class="upper_header">
+        <ul>
+          <li>Offers</li>
+          <li>Fanbook</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 16 28" class=" "
+              stroke="none" style="font-size: 10px;">
+              <rect width="15.25" height="27.25" x="0.375" y="0.375" stroke="#000" stroke-width="0.75" rx="1.625">
+              </rect>
+              <circle cx="8" cy="24" r="1" fill="#000"></circle>
+            </svg>Download App</li>
+          <li>Find a store near me</li>
+        </ul>
+      </div>
+
+      <div class="upper_header2">
+        <ul>
+          <li>Contact Us </li>
+          <li>Track Order</li>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <div class="main_header">
+      <div class="header_right">
+        <!-- <h1><a href="/pages/home.html">DB<span style="color: var(--primary-color); margin: 0; font-family: 'godber'; font-weight: 100; font-size: 24px;" >I</span> Clothing</a></h1> -->
+        <h1><a href="/pages/home.html">DBI Clothing</a></h1>
+        <ul>
+          <li>MEN</li>
+          <li>WOMEN</li>
+        </ul>
+
+      </div>
+
+      <div class="header_left">
+        <div class="search_box">
+          <form class="header_search_container ">
+            <li class="header_search_field_wrapper "><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                fill="none" viewBox="0 0 24 24" class=" " stroke="none" style="font-size: 24px;">
+                <path stroke="#303030" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M18.926 11.338a7.588 7.588 0 1 1-15.176 0 7.588 7.588 0 0 1 15.176 0Zm-1.692 5.896L21 21"></path>
+              </svg>
+
+              <input class="header_search_field" type="search" placeholder="Search by products" value="">
+            </li>
+          </form>
+
+          <span style="color: #D3D3D3; font-size: 1.125rem; font-weight: 400;">|</span>
+          <span id=""><a href="/pages/login.html" style="text-decoration: none; color: black;">LOGIN</a></span>
+
+
+
+          <a data-testid="wishlist-link" href="/wishlist">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24" class=" "
+              stroke="none" style="font-size: 24px;">
+              <g clip-path="url(#header_icon_wishlist_svg__a)">
+                <path stroke="#303030" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M12 20S3 14.91 3 8.727c0-1.093.375-2.152 1.06-2.997a4.672 4.672 0 0 1 2.702-1.638 4.639 4.639 0 0 1 3.118.463A4.71 4.71 0 0 1 12 6.909a4.71 4.71 0 0 1 2.12-2.354 4.639 4.639 0 0 1 3.118-.463 4.672 4.672 0 0 1 2.701 1.638A4.756 4.756 0 0 1 21 8.727C21 14.91 12 20 12 20Z">
+                </path>
+              </g>
+              <defs>
+                <clipPath id="header_icon_wishlist_svg__a">
+                  <path fill="#fff" d="M0 0h24v24H0z"></path>
+                </clipPath>
+              </defs>
+            </svg></a>
+
+          <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24"
+              style="font-size: 24px;">
+              <path stroke="#303030" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M.75 4.8c0-.02.003-.037.006-.05h14.488c.003.013.006.03.006.05v14.4c0 .02-.003.037-.006.05H.756a.196.196 0 0 1-.006-.05V4.8ZM4.5 3.75c0-.73.395-1.429 1.098-1.945C6.302 1.29 7.255 1 8.25 1c.995 0 1.948.29 2.652.805C11.605 2.321 12 3.021 12 3.75">
+              </path>
+            </svg>
+          </a>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom_header">
+
+
+      <div class="gender-selector">
+        <div class="slider"></div>
+        <div class="gender-selector-btn active" onclick="selectGender('men')">MEN</div>
+        <div class="gender-selector-btn" onclick="selectGender('women')">WOMEN</div>
+      </div>
+
+
+      <div class="data-list">
+        <ul>
+          <li>Shop Now</li>
+          <li>Plus Size</li>
+          <li>Bwkf X Google Ai</li>
+          <li>Shop Now</li>
+          <li>Plus Size</li>
+          <li>Bwkf X Google Ai</li>
+          <li>Shop Now</li>
+          <li>Plus Size</li>
+          <li>Bwkf X Google Ai</li>
+
+
+          <li>Bwkf X Google Ai</li>
+          <li>Shop Now</li>
+          <li>Plus Size</li>
+          <li>Bwkf X Google Ai</li>
+
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="mobile_header">
+    <div class="mobile_menu">
+      <div class="menu_logo">
+        <svg xmlns="http://www.w3.org/2000/svg" onclick="openmenu()" width="1em" height="1em" fill="none" viewBox="0 0 20 20" class=" "
+          stroke="none" style="height: 20px; width: 20px;">
+          <g stroke="#292D35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            clip-path="url(#icon_hamburger_svg__a)">
+            <path d="M2.917 10.046h10.231M2.917 3.75h14.166M2.917 16.343h14.166"></path>
+          </g>
+          <defs>
+            <clipPath id="icon_hamburger_svg__a">
+              <path fill="#fff" d="M0 0h20v20H0z"></path>
+            </clipPath>
+          </defs>
+        </svg>
+        <h1><a href="/pages/home.html">DBI Clothing</a></h1>
+      </div>
+      <div class="icon_group">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24"
+          data-testid="plp-header-search-icon" class=" " stroke="none" style="height: 24px; width: 24px;">
+          <path stroke="#303030" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            d="M18.926 11.338a7.588 7.588 0 1 1-15.176 0 7.588 7.588 0 0 1 15.176 0Zm-1.692 5.896L21 21"></path>
+        </svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24"
+          data-testid="plp-header-wishlist-icon" class=" " stroke="none" style="height: 24px; width: 24px;">
+          <path stroke="#303030" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            d="M12 20S3 14.91 3 8.727A4.76 4.76 0 0 1 4.06 5.73a4.672 4.672 0 0 1 2.702-1.638 4.639 4.639 0 0 1 3.118.463A4.71 4.71 0 0 1 12 6.909a4.71 4.71 0 0 1 2.12-2.354 4.639 4.639 0 0 1 3.118-.463 4.672 4.672 0 0 1 2.701 1.638A4.756 4.756 0 0 1 21 8.727C21 14.91 12 20 12 20Z">
+          </path>
+        </svg>
+
+        <div class="relative w-fit" data-testid="plp-header-cart-icon">
+          <div class=""><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24"
+              class=" " stroke="none" style="height: 24px; width: 24px;">
+              <g stroke="#292D35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                clip-path="url(#icon-cart-mobile_svg__a)">
+                <path
+                  d="M3.75 4.8a.08.08 0 0 1 .014-.05h16.471a.081.081 0 0 1 .015.05v14.4a.081.081 0 0 1-.015.05H3.765a.08.08 0 0 1-.015-.05V4.8Z">
+                </path>
+                <path d="M15.75 8a3.75 3.75 0 0 1-7.5 0"></path>
+              </g>
+              <defs>
+                <clipPath id="icon-cart-mobile_svg__a">
+                  <path fill="#fff" d="M0 0h24v24H0z"></path>
+                </clipPath>
+              </defs>
+            </svg></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="phone_menubar_overlay" style="display: none;">
+
+  </div>
+  <div class="phone_menubar" style="display: none;">
+
+    <div class="scroller">
+
+   
+
+    <div class="login_sidemenu">
+      <div class="sidemenu_img">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 32 32" class=" "
+          stroke="none" style="height: 40px; width: 32px;">
+          <circle cx="16" cy="16" r="16" fill="#E8E8E8"></circle>
+          <path stroke="#494949" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            d="M19.75 10a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM8.501 24.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 16 25.75c-2.676 0-5.216-.584-7.499-1.632Z">
+          </path>
+        </svg>
+
+        <div class="sidemenu_textarea">
+          <h2>
+            Hey There!</h2>
+          <a href="/pages/login.html" style="text-decoration: none;"><p>Login / Sign Up</p></a>
+        </div>
+
+
+
+      </div>
+
+      <div class="close_button" onclick="toogle()">
+        <button >
+          <svg  xmlns="http://www.w3.org/2000/svg"  width="1em" height="1em" fill="none" viewBox="0 0 24 24" class=" "
+            stroke="none" style="height: 20px; width: 20px;">
+            <g clip-path="url(#icon-cross_svg__a)">
+              <path fill="#191919"
+                d="m12 10.586 4.95-4.95 1.415 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95Z">
+              </path>
+            </g>
+            <defs>
+              <clipPath id="icon-cross_svg__a">
+                <path fill="#fff" d="M0 0h24v24H0z"></path>
+              </clipPath>
+            </defs>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="shopping_cate">
+
+    
+
+
+        <p class="shop_heading">shop in</p>
+
+
+        <div class="hr">
+
+        </div>
+
+
+    </div>
+
+    <div class="shopping_cate_list">
+      <div class="cate_box">
+        <img src="/assets/images/Circle-icon-men.webp" alt="">
+        <p>Men</p>
+      </div>
+
+      <div class="cate_box">
+        <img src="/assets/images/Circle-icon-men.webp" alt="">
+        <p>Men</p>
+      </div>
+
+
+      <div class="cate_box">
+        <img src="/assets/images/Circle-icon-men.webp" alt="">
+        <p>Men</p>
+      </div>
+
+
+      <div class="cate_box">
+        <img src="/assets/images/Circle-icon-men.webp" alt="">
+        <p>Men</p>
+      </div>
+
+
+      <div class="cate_box">
+        <img src="/assets/images/Circle-icon-men.webp" alt="">
+        <p>Men</p>
+      </div>
+
+
+
+      <div class="cate_box">
+        <img src="/assets/images/Circle-icon-men.webp" alt="">
+        <p>Men</p>
+      </div>
+
+
+      <div class="cate_box">
+        <img src="/assets/images/Circle-icon-men.webp" alt="">
+        <p>Men</p>
+      </div>
+      <div class="cate_box">
+        <img src="/assets/images/Circle-icon-men.webp" alt="">
+        <p>Men</p>
+      </div>
+    </div>
+
+
+    <div class="shopping_cate">
+  <p class="shop_heading">ENGAGE</p>
+        <div class="hr"> </div>
+ </div> 
+
+      <div class="refer_cate_list">
+      <div class="refer_box">
+        <img src="/assets/images/Circle-icon-refer-and-earn.webp" alt="">
+        <p>Refer and Earn</p>
+      </div>
+
+      <div class="refer_box">
+        <img src="/assets/images/ic-hamburger-store-locator.webp" alt="">
+        <p>Find a Store</p>
+      </div>
+
+
+     
+    </div>
+
+
+    <!-- profile -->
+
+     <div class="shopping_cate">
+
+    
+
+
+        <p class="shop_heading">MY PROFILE</p>
+
+
+        <div class="hr">
+
+        </div>
+
+
+    </div>
+
+
+    <!-- my profile_cart -->
+     <div class="profile_box">
+     <div class="profile_detail">
+      <img src="/assets/images/ic-hamburger-account.webp" alt="">
+      <p>My Account</p>
+     </div>
+
+      <div class="profile_detail">
+      <img src="/assets/images/ic-hamburger-profile.webp" alt="">
+      <p>My Orders</p>
+     </div>
+
+      <div class="profile_detail">
+      <img src="/assets/images/ic-hamburger-wallet.webp" alt="">
+      <p>My wallet</p>
+     </div>
+
+      <div class="profile_detail">
+      <img src="/assets/images/ic-hamburger-wishlist.webp" alt="">
+      <p>My wishlist</p>
+     </div>
+</div>
+
+
+<!-- contact -->
+     <div class="shopping_cate">
+        <p class="shop_heading">Contact</p>
+        <div class="hr">
+
+        </div>
+    </div>
+
+     <div class="profile_box">
+     <div class="profile_detail">
+      
+      <p>Help & support</p>
+       <p>Feedback & Suggestions</p>
+     </div>
+
+   
+</div>
+
+
+     <div class="shopping_cate">
+        <p class="shop_heading">About us</p>
+        <div class="hr">
+
+        </div>
+    </div>
+
+     <div class="profile_box">
+     <div class="profile_detail">
+      
+      <p>Our story</p>
+       <p>Fanbook</p>
+     </div>
+
+   
+</div>
+
+
+ </div>
+     </div>
+
+  </div>
+
+
+  <div class="mobile_category">
+    <div class="box">
+      <div class="box_img">
+        <img src="/assets/images/top nav 1.webp" alt="">
+        <p>Live Now</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box_img">
+        <img src="/assets/images/top nav 1.webp" alt="">
+        <p>Live Now</p>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box_img">
+        <img src="/assets/images/top nav 1.webp" alt="">
+        <p>Live Now</p>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box_img">
+        <img src="/assets/images/top nav 1.webp" alt="">
+        <p>Live Now</p>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box_img">
+        <img src="/assets/images/top nav 1.webp" alt="">
+        <p>Live Now</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box_img">
+        <img src="/assets/images/top nav 1.webp" alt="">
+        <p>Live Now</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box_img">
+        <img src="/assets/images/top nav 1.webp" alt="">
+        <p>Live Now</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box_img">
+        <img src="/assets/images/top nav 1.webp" alt="">
+        <p>Live Now</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box_img">
+        <img src="/assets/images/top nav 1.webp" alt="">
+        <p>Live Now</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box_img">
+        <img src="/assets/images/top nav 1.webp" alt="">
+        <p>Live Now</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="main-content">
+
+    <div class="image-autoplay">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="/assets/images/banner 1 men.jpeg" alt=""></div>
+          <div class="swiper-slide"><img src="/assets/images/banner men 2.jpeg" alt=""></div>
+          <div class="swiper-slide"><img src="/assets/images/banner man 3.jpeg" alt=""></div>
+          <div class="swiper-slide"><img src="/assets/images/banner man 4.jpeg" alt=""></div>
+          <div class="swiper-slide"><img src="/assets/images/banner man 5.jpeg" alt=""></div>
+          <div class="swiper-slide"><img src="/assets/images/banner man 6.jpeg" alt=""></div>
+        </div>
+
+
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <div class="offer">
+      <img src="/assets/images/offer-strip.webp" alt="" id="img_offer1">
+      <img src="/assets/images/offer-strip-phone.webp" alt="" id="img_offer2">
+    </div>
+
+
+    <!-- new arrivals section -->
+
+
+    <div class="new_arrival_section">
+      <div class="arrivals">
+
+        <p>New Arrival</p>
+
+        <a href="" style="    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 18px;
+  ">Explore All</a>
+
+      </div>
+      <div class="swiper product-swiper">
+        <div class="swiper-wrapper product-wrapper">
+          <!-- One sample product -->
+          <div class="swiper-slide product-card">
+
+            <div class="product-card">
+              <!-- Offer Label -->
+              <div class="offer-label">BUY 3 FOR 999</div>
+
+              <!-- Product Image -->
+              <div class="product-img">
+                <a href="/pages/single_product.html">
+                  <img
+                    src="https://images.bewakoof.com/t320/men-s-fog-green-area-51-graphic-printed-t-shirt-684601-1756106818-1.jpg"
+                    alt="Men's Fog Green Area 51 Graphic Printed T-shirt"></a>
+              </div>
+
+              <!-- Rating -->
+              <div class="rating">
+                <span class="star"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none"
+                    viewBox="0 0 12 12" class=" " stroke="none" style="height: 16px; width: 16px;">
+                    <path fill="#FFD232"
+                      d="M5.58 1.15a.5.5 0 0 1 .84 0l1.528 2.363a.5.5 0 0 0 .291.212l2.72.722a.5.5 0 0 1 .26.799L9.442 7.429a.5.5 0 0 0-.111.343l.153 2.81a.5.5 0 0 1-.68.493L6.18 10.063a.5.5 0 0 0-.36 0l-2.625 1.014a.5.5 0 0 1-.68-.494l.153-2.81a.5.5 0 0 0-.11-.343L.781 5.246a.5.5 0 0 1 .26-.799l2.719-.722a.5.5 0 0 0 .291-.212L5.58 1.149Z">
+                    </path>
+                  </svg></span>
+                <span>4.5</span>
+              </div>
+
+              <!-- Product Info -->
+              <div class="product-info">
+                <div class="informtion">
+                  <div class="para">
+                    <h3>Bewakoof®</h3>
+
+                    <p>Men's Fog Green Area..</p>
+                  </div>
+                  <div class="wishlist">
+                    <img src="/assets/images/Wishlist.svg" alt="">
+                  </div>
+                </div>
+                <div class="price">
+                  <strong>₹399</strong>
+                  <del>₹699</del>
+                  <span class="discount">42% OFF</span>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+
+        <div class="swiper-button-next product-next"></div>
+        <div class="swiper-button-prev product-prev"></div>
+
+
+
+        <center style="    margin-top: 34px;">
+          <a href="" class="Explore" style="    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 18px;
+  ">Explore All</a>
+        </center>
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <!-- trending-section -->
+
+
+    <div class="trending">
+      <h1>Trending Categories</h1>
+      <div class="product">
+        <div class="img1"><img src="/assets/images/trending1.webp" alt="" srcset=""></div>
+        <div class="img1"><img src="/assets/images/trending2.webp" alt="" srcset=""></div>
+        <div class="img1"><img src="/assets/images/trending3.webp" alt="" srcset=""></div>
+        <div class="img1"><img src="/assets/images/trending4.webp" alt="" srcset=""></div>
+        <div class="img1"><img src="/assets/images/trending5.webp" alt="" srcset=""></div>
+        <div class="img1"><img src="/assets/images/trending6.webp" alt="" srcset=""></div>
+      </div>
+      <div class="product">
+        <div class="img1"><img src="/assets/images/trending7.webp" alt="" srcset=""></div>
+        <div class="img1"><img src="/assets/images/trending8.webp" alt="" srcset=""></div>
+        <div class="img1"><img src="/assets/images/trending9.webp" alt="" srcset=""></div>
+        <div class="img1"><img src="/assets/images/trending10.webp" alt="" srcset=""></div>
+        <div class="img1"><img src="/assets/images/trending11.webp" alt="" srcset=""></div>
+        <div class="img1"><img src="/assets/images/trending12.webp" alt="" srcset=""></div>
+      </div>
+      <div class="product_3">
+        <div class="img1"><img src="/assets/images/trending13.webp" alt="" srcset=""></div>
+        <div class="img1"><img src="/assets/images/trending14.webp" alt="" srcset=""></div>
+        <div class="img1"><img src="/assets/images/trending.webp" alt="" srcset=""></div>
+        <div class="img1"><img src="/assets/images/trending16.webp" alt="" srcset=""></div>
+      </div>
+    </div>
+
+
+    <!-- product 2 -->
+
+    <div class="product_second">
+      <div class="arrivals">
+
+        <p>Joggers starts at Rs.799</p>
+
+        <a href="" style="    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 18px;
+  ">Explore All</a>
+
+      </div>
+      <div class="swiper product-swiper-2">
+        <div class="swiper-wrapper product-wrapper_second">
+          <!-- One sample product -->
+          <div class="swiper-slide product-card_second">
+
+
+            <div class="product-card">
+              <!-- Offer Label -->
+              <div class="offer-label">BUY 3 FOR 999</div>
+
+              <!-- Product Image -->
+              <div class="product-img">
+                <a href="/pages/single_product.html">
+                  <img
+                    src="https://images.bewakoof.com/t320/men-s-fog-green-area-51-graphic-printed-t-shirt-684601-1756106818-1.jpg"
+                    alt="Men's Fog Green Area 51 Graphic Printed T-shirt"></a>
+              </div>
+
+              <!-- Rating -->
+              <div class="rating">
+                <span class="star"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none"
+                    viewBox="0 0 12 12" class=" " stroke="none" style="height: 16px; width: 16px;">
+                    <path fill="#FFD232"
+                      d="M5.58 1.15a.5.5 0 0 1 .84 0l1.528 2.363a.5.5 0 0 0 .291.212l2.72.722a.5.5 0 0 1 .26.799L9.442 7.429a.5.5 0 0 0-.111.343l.153 2.81a.5.5 0 0 1-.68.493L6.18 10.063a.5.5 0 0 0-.36 0l-2.625 1.014a.5.5 0 0 1-.68-.494l.153-2.81a.5.5 0 0 0-.11-.343L.781 5.246a.5.5 0 0 1 .26-.799l2.719-.722a.5.5 0 0 0 .291-.212L5.58 1.149Z">
+                    </path>
+                  </svg></span>
+                <span>4.5</span>
+              </div>
+
+              <!-- Product Info -->
+              <div class="product-info">
+                <div class="informtion">
+                  <div class="para">
+                    <h3>Bewakoof®</h3>
+
+                    <p>Men's Fog Green Area..</p>
+                  </div>
+                  <div class="wishlist">
+                    <img src="/assets/images/Wishlist.svg" alt="">
+                  </div>
+                </div>
+                <div class="price">
+                  <strong>₹399</strong>
+                  <del>₹699</del>
+                  <span class="discount">42% OFF</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-next product-next"></div>
+        <div class="swiper-button-prev product-prev"></div>
+
+        <center style="    margin-top: 34px;">
+          <a href="" class="Explore" style="    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 18px;
+  ">Explore All</a>
+        </center>
+      </div>
+
+    </div>
+
+    <!-- cat -->
+
+    <div class="lower_deals">
+      <div class="top_img">
+        <img src="/assets/images/upper.webp" alt="" srcset="" id="upper1">
+        <img src="/assets/images/upper_mobile.webp" alt="" width="100%" id="upper2">
+      </div>
+      <div class="img_gallery">
+        <img src="/assets/images/deals img1.webp" alt="this is img" srcset="">
+        <img src="/assets/images/deals img2.webp" alt="this is img" srcset="">
+        <img src="/assets/images/deals img3.webp" alt="this is img" srcset="">
+        <img src="/assets/images/deals img4.webp" alt="this is img" srcset="">
+        <img src="/assets/images/deals img5.webp" alt="this is img" srcset="">
+        <img src="/assets/images/deals img6.webp" alt="this is img" srcset="">
+      </div>
+      <div class="img_gallery2">
+        <img src="/assets/images/deals img7.webp" alt="this is img" srcset="">
+        <img src="/assets/images/deals img8.webp" alt="this is img" srcset="">
+        <img src="/assets/images/deals img9.webp" alt="this is img" srcset="">
+        <img src="/assets/images/deals img10.webp" alt="this is img" srcset="">
+        <img src="/assets/images/deals img11.webp" alt="this is img" srcset="">
+        <img src="/assets/images/deals img1.webp" alt="this is img" srcset="">
+      </div>
+    </div>
+
+
+    <!-- product - third -->
+
+    <div class="product_third">
+      <div class="arrivals">
+
+        <p>New Arrivals From Rs.599</p>
+
+        <a href="" style="    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 18px;
+  ">Explore All</a>
+
+      </div>
+      <div class="swiper product-swiper-3">
+        <div class="swiper-wrapper product-wrapper_third">
+          <!-- One sample product -->
+          <div class="swiper-slide product-card_third">
+
+            <div class="product-card">
+              <!-- Offer Label -->
+              <div class="offer-label">BUY 3 FOR 999</div>
+
+              <!-- Product Image -->
+              <div class="product-img">
+                <a href="/pages/single_product.html">
+                  <img
+                    src="https://images.bewakoof.com/t320/men-s-fog-green-area-51-graphic-printed-t-shirt-684601-1756106818-1.jpg"
+                    alt="Men's Fog Green Area 51 Graphic Printed T-shirt"></a>
+              </div>
+
+              <!-- Rating -->
+              <div class="rating">
+                <span class="star"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none"
+                    viewBox="0 0 12 12" class=" " stroke="none" style="height: 16px; width: 16px;">
+                    <path fill="#FFD232"
+                      d="M5.58 1.15a.5.5 0 0 1 .84 0l1.528 2.363a.5.5 0 0 0 .291.212l2.72.722a.5.5 0 0 1 .26.799L9.442 7.429a.5.5 0 0 0-.111.343l.153 2.81a.5.5 0 0 1-.68.493L6.18 10.063a.5.5 0 0 0-.36 0l-2.625 1.014a.5.5 0 0 1-.68-.494l.153-2.81a.5.5 0 0 0-.11-.343L.781 5.246a.5.5 0 0 1 .26-.799l2.719-.722a.5.5 0 0 0 .291-.212L5.58 1.149Z">
+                    </path>
+                  </svg></span>
+                <span>4.5</span>
+              </div>
+
+              <!-- Product Info -->
+              <div class="product-info">
+                <div class="informtion">
+                  <div class="para">
+                    <h3>Bewakoof®</h3>
+
+                    <p>Men's Fog Green Area..</p>
+                  </div>
+                  <div class="wishlist">
+                    <img src="/assets/images/Wishlist.svg" alt="">
+                  </div>
+                </div>
+                <div class="price">
+                  <strong>₹399</strong>
+                  <del>₹699</del>
+                  <span class="discount">42% OFF</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="swiper-button-next product-next"></div>
+        <div class="swiper-button-prev product-prev"></div>
+
+        <center style="    margin-top: 34px;">
+          <a href="" class="Explore" style="    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 18px;
+  ">Explore All</a>
+        </center>
+      </div>
+    </div>
+
+    <!-- Latest Collections section -->
+
+    <div class="collection-section">
+      <p class="collection-title">Latest Collections</p>
+
+      <div class="swiper collection-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="/assets/images/img1.webp" alt=""></div>
+          <div class="swiper-slide"><img src="/assets/images/img2.webp" alt=""></div>
+          <div class="swiper-slide"><img src="/assets/images/img3.png" alt=""></div>
+          <div class="swiper-slide"><img src="/assets/images/img4.webp" alt=""></div>
+          <div class="swiper-slide"><img src="/assets/images/img5.png" alt=""></div>
+          <div class="swiper-slide"><img src="/assets/images/img6.png" alt=""></div>
+          <div class="swiper-slide"><img src="/assets/images/img7.jpg" alt=""></div>
+        </div>
+
+        <!-- Swiper Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <!-- product fourty -->
+
+
+
+    <div class="product_fourty">
+      <div class="arrivals">
+
+        <p>Plus Size Store from Rs.499</p>
+
+        <a href="" style="    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 18px;
+  ">Explore All</a>
+
+      </div>
+      <div class="swiper product-swiper-4">
+        <div class="swiper-wrapper product-wrapper_fourty">
+          <!-- One sample product -->
+          <div class="swiper-slide product-card_fourty">
+
+            <div class="product-card">
+              <!-- Offer Label -->
+              <div class="offer-label">BUY 3 FOR 999</div>
+
+              <!-- Product Image -->
+              <div class="product-img">
+                <img
+                  src="https://images.bewakoof.com/t320/men-s-fog-green-area-51-graphic-printed-t-shirt-684601-1756106818-1.jpg"
+                  alt="Men's Fog Green Area 51 Graphic Printed T-shirt">
+              </div>
+
+              <!-- Rating -->
+              <div class="rating">
+                <span class="star"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none"
+                    viewBox="0 0 12 12" class=" " stroke="none" style="height: 16px; width: 16px;">
+                    <path fill="#FFD232"
+                      d="M5.58 1.15a.5.5 0 0 1 .84 0l1.528 2.363a.5.5 0 0 0 .291.212l2.72.722a.5.5 0 0 1 .26.799L9.442 7.429a.5.5 0 0 0-.111.343l.153 2.81a.5.5 0 0 1-.68.493L6.18 10.063a.5.5 0 0 0-.36 0l-2.625 1.014a.5.5 0 0 1-.68-.494l.153-2.81a.5.5 0 0 0-.11-.343L.781 5.246a.5.5 0 0 1 .26-.799l2.719-.722a.5.5 0 0 0 .291-.212L5.58 1.149Z">
+                    </path>
+                  </svg></span>
+                <span>4.5</span>
+              </div>
+
+              <!-- Product Info -->
+              <div class="product-info">
+                <div class="informtion">
+                  <div class="para">
+                    <h3>Bewakoof®</h3>
+
+                    <p>Men's Fog Green Area..</p>
+                  </div>
+                  <div class="wishlist">
+                    <img src="/assets/images/Wishlist.svg" alt="">
+                  </div>
+                </div>
+                <div class="price">
+                  <strong>₹399</strong>
+                  <del>₹699</del>
+                  <span class="discount">42% OFF</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="swiper-button-next product-next"></div>
+        <div class="swiper-button-prev product-prev"></div>
+
+        <center style="    margin-top: 34px;">
+          <a href="" class="Explore" style="    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 18px;
+  ">Explore All</a>
+        </center>
+      </div>
+    </div>
+
+    <!-- banner -->
+
+    <div class="banner">
+      <img src="/assets/images/banner.webp" alt="" id="banner1">
+      <img src="/assets/images/banner mobile.webp" alt="" id="banner2">
+    </div>
+
+
+
+
+    <!-- Shop by Fandom -->
+
+    <div class="fandom_banner">
+      <p>Shop by Fandom</p>
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="/assets/images/500x600-Fandom-Tile-men--2--1757581328.webp" alt=""></div>
+          <div class="swiper-slide"><img src="/assets/images/500x600-Fandom-Tile-Superman-men--3--1753347331.webp"
+              alt=""></div>
+          <div class="swiper-slide"><img src="/assets/images/500x600-Fandom-Tile-Superman-Men-1753194940.webp" alt="">
+          </div>
+          <div class="swiper-slide"><img src="/assets/images/SC-DC-men-1738586415.webp" alt=""></div>
+          <div class="swiper-slide"><img src="/assets/images/SC-HP-men-1738586657.webp" alt=""></div>
+          <div class="swiper-slide"><img src="/assets/images/SC-marvel-men-1738586657.webp" alt=""></div>
+          <div class="swiper-slide"><img src="/assets/images/SC-naruto-men-1738586659.webp" alt=""></div>
+          <div class="swiper-slide"><img src="/assets/images/SC-NASA-men-1738586659.webp" alt=""></div>
+          <div class="swiper-slide"><img src="/assets/images/SC-peanuts-men-1738586855.webp" alt=""></div>
+          <div class="swiper-slide"><img src="/assets/images/SC-garfield-men-1738586652.webp" alt=""></div>
+          <div class="swiper-slide"><img src="/assets/images/Scroll-collab-View-All--1--1738161122.webp" alt=""></div>
+        </div>
+
+
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <!-- product-fivest -->
+
+
+
+    <div class="product_fivest">
+      <div class="arrivals">
+
+        <p>Cozy Pyjamas from Rs.549</p>
+
+        <a href="" style="    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 18px;
+  ">Explore All</a>
+
+      </div>
+      <div class="swiper product-swiper-5">
+        <div class="swiper-wrapper product-wrapper_fivest">
+          <!-- One sample product -->
+          <div class="swiper-slide product-card_fivest">
+
+            <div class="product-card">
+              <!-- Offer Label -->
+              <div class="offer-label">BUY 3 FOR 999</div>
+
+              <!-- Product Image -->
+              <div class="product-img">
+                <img
+                  src="https://images.bewakoof.com/t320/men-s-fog-green-area-51-graphic-printed-t-shirt-684601-1756106818-1.jpg"
+                  alt="Men's Fog Green Area 51 Graphic Printed T-shirt">
+              </div>
+
+              <!-- Rating -->
+              <div class="rating">
+                <span class="star"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none"
+                    viewBox="0 0 12 12" class=" " stroke="none" style="height: 16px; width: 16px;">
+                    <path fill="#FFD232"
+                      d="M5.58 1.15a.5.5 0 0 1 .84 0l1.528 2.363a.5.5 0 0 0 .291.212l2.72.722a.5.5 0 0 1 .26.799L9.442 7.429a.5.5 0 0 0-.111.343l.153 2.81a.5.5 0 0 1-.68.493L6.18 10.063a.5.5 0 0 0-.36 0l-2.625 1.014a.5.5 0 0 1-.68-.494l.153-2.81a.5.5 0 0 0-.11-.343L.781 5.246a.5.5 0 0 1 .26-.799l2.719-.722a.5.5 0 0 0 .291-.212L5.58 1.149Z">
+                    </path>
+                  </svg></span>
+                <span>4.5</span>
+              </div>
+
+              <!-- Product Info -->
+              <div class="product-info">
+                <div class="informtion">
+                  <div class="para">
+                    <h3>Bewakoof®</h3>
+
+                    <p>Men's Fog Green Area..</p>
+                  </div>
+                  <div class="wishlist">
+                    <img src="/assets/images/Wishlist.svg" alt="">
+                  </div>
+                </div>
+                <div class="price">
+                  <strong>₹399</strong>
+                  <del>₹699</del>
+                  <span class="discount">42% OFF</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="swiper-button-next product-next"></div>
+        <div class="swiper-button-prev product-prev"></div>
+
+        <center style="    margin-top: 34px;">
+          <a href="" class="Explore" style="    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 18px;
+  ">Explore All</a>
+        </center>
+      </div>
+    </div>
+
+
+    <!-- bottom banner -section -->
+
+    <div class="bottom_banner">
+      <img src="/assets/images/ThinBanner-desktop--1758262366.webp" alt="" id="b1">
+      <img src="/assets/images/Thin-banner-msite--1758262366.webp" alt="" id="b2">
+    </div>
+
+    <!-- product sixest -->
+
+
+
+    <div class="product_sixest">
+      <div class="arrivals">
+
+        <p>Cozy Pyjamas from Rs.549</p>
+
+        <a href="" style="    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 18px;
+  ">Explore All</a>
+
+      </div>
+      <div class="swiper product-swiper-6">
+        <div class="swiper-wrapper product-wrappers">
+          <!-- One sample product -->
+          <div class="swiper-slide product-cards">
+
+            <div class="product-card">
+              <!-- Offer Label -->
+              <div class="offer-label">BUY 3 FOR 999</div>
+
+              <!-- Product Image -->
+              <div class="product-img">
+                <img
+                  src="https://images.bewakoof.com/t320/men-s-fog-green-area-51-graphic-printed-t-shirt-684601-1756106818-1.jpg"
+                  alt="Men's Fog Green Area 51 Graphic Printed T-shirt">
+              </div>
+
+              <!-- Rating -->
+              <div class="rating">
+                <span class="star"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none"
+                    viewBox="0 0 12 12" class=" " stroke="none" style="height: 16px; width: 16px;">
+                    <path fill="#FFD232"
+                      d="M5.58 1.15a.5.5 0 0 1 .84 0l1.528 2.363a.5.5 0 0 0 .291.212l2.72.722a.5.5 0 0 1 .26.799L9.442 7.429a.5.5 0 0 0-.111.343l.153 2.81a.5.5 0 0 1-.68.493L6.18 10.063a.5.5 0 0 0-.36 0l-2.625 1.014a.5.5 0 0 1-.68-.494l.153-2.81a.5.5 0 0 0-.11-.343L.781 5.246a.5.5 0 0 1 .26-.799l2.719-.722a.5.5 0 0 0 .291-.212L5.58 1.149Z">
+                    </path>
+                  </svg></span>
+                <span>4.5</span>
+              </div>
+
+              <!-- Product Info -->
+              <div class="product-info">
+                <div class="informtion">
+                  <div class="para">
+                    <h3>Bewakoof®</h3>
+
+                    <p>Men's Fog Green Area..</p>
+                  </div>
+                  <div class="wishlist">
+                    <img src="/assets/images/Wishlist.svg" alt="">
+                  </div>
+                </div>
+                <div class="price">
+                  <strong>₹399</strong>
+                  <del>₹699</del>
+                  <span class="discount">42% OFF</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="swiper-button-next product-next"></div>
+        <div class="swiper-button-prev product-prev"></div>
+
+        <center style="    margin-top: 34px;">
+          <a href="" class="Explore" style="    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 18px;
+  ">Explore All</a>
+        </center>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- destop-footer -->
+  <div class="main_footer">
+    <div class="first_box">
+      <h2><a href="/pages/home.html">DBI Clothing</a></h2>
+      <h1>CUSTOMER SERVICE</h1>
+      <ul>
+        <li>Contact Us</li>
+        <li>Track Order</li>
+        <li>Return Order</li>
+        <li>Cancel Order</li>
+      </ul>
+      <div class="svg_one">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 22 17" class=" "
+          stroke="none" style="font-size: 16px;">
+          <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            d="M7.25 14.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H2.375a1.125 1.125 0 0 1-1.125-1.125V10.25m12 4.5h2.25m-2.25 0v-4.5m-12 0V2.615a1.106 1.106 0 0 1 .987-1.106 48.554 48.554 0 0 1 10.026 0c.565.058.987.538.987 1.106v.958m-12 6.677h12m5.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 1 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.055 2.055 0 0 0-1.58-.86H13.25m0 0v6.677">
+          </path>
+        </svg>
+        <p>15 Days Return policy*</p>
+      </div>
+      <div class="svg_two">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 22 19" class=" "
+          stroke="none" style="font-size: 16px;">
+          <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            d="M1.25 15.75a60.072 60.072 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V15.75M2.75 1.5v.75A.75.75 0 0 1 2 3h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H19.25M1.25 3v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m-18-1.5v.375A1.125 1.125 0 0 0 2.375 13.5h.375M1.25 12H2a.75.75 0 0 1 .75.75v.75m16.5 0v-.75A.75.75 0 0 1 20 12h.75m-1.5 1.5H2.75M14 7.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H17V7.5Zm-12 0h.008v.008H5V7.5Z">
+          </path>
+        </svg>
+        <p>Cash On Delivery*</p>
+      </div>
+    </div>
+    <div class="secound_box">
+      <h1>COMPANY</h1>
+      <ul>
+        <li>About Us</li>
+        <li>Terms & Conditions</li>
+        <li>Privacy policy</li>
+        <li>We are Hiring</li>
+      </ul>
+      <h1>DOWNLOAD THE APP</h1>
+      <div class="app_logo">
+        <img
+          src="https://www.bewakoof.com/_next/image?url=https%3A%2F%2Fimages.bewakoof.com%2Fweb%2Fapp_android_v1.png&w=256&q=75"
+          alt="this is img" srcset="">
+        <img
+          src="https://www.bewakoof.com/_next/image?url=https%3A%2F%2Fimages.bewakoof.com%2Fweb%2Fapp_ios_v1.png&w=256&q=75"
+          alt="this is img" srcset="">
+      </div>
+    </div>
+    <div class="third_box">
+      <h1>CONNECT WITH US</h1>
+      <div class="social_media">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 16 16" class=" "
+          stroke="none" style="font-size: 16px;">
+          <path fill="#fff"
+            d="M15.36 0H.64A.64.64 0 0 0 0 .64v14.72c0 .354.286.64.64.64h14.72a.64.64 0 0 0 .64-.64V.64a.64.64 0 0 0-.64-.64Zm-1.848 4.67h-1.278c-1.002 0-1.196.476-1.196 1.176v1.542h2.392l-.312 2.414h-2.08V16H8.544V9.804H6.458V7.388h2.086v-1.78c0-2.066 1.262-3.192 3.106-3.192.884 0 1.642.066 1.864.096V4.67h-.002Z">
+          </path>
+        </svg>
+        <p>4.7M People like this</p>
+      </div>
+      <div class="social_media2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 16 17" class=" "
+          stroke="none" style="font-size: 16px;">
+          <path fill="#fff"
+            d="M4.64.02h6.72C13.92.02 16 2.1 16 4.66v6.72a4.64 4.64 0 0 1-4.64 4.64H4.64C2.08 16.02 0 13.94 0 11.38V4.66A4.64 4.64 0 0 1 4.64.02Zm-.16 1.6A2.88 2.88 0 0 0 1.6 4.5v7.04a2.878 2.878 0 0 0 2.88 2.88h7.04a2.88 2.88 0 0 0 2.88-2.88V4.5a2.878 2.878 0 0 0-2.88-2.88H4.48Zm7.72 1.2a1 1 0 1 1 0 2 1 1 0 0 1 0-2ZM8 4.02a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 1.6a2.4 2.4 0 1 0 0 4.8 2.4 2.4 0 0 0 0-4.8Z">
+          </path>
+        </svg>
+        <p>1M People like this</p>
+      </div>
+      <div class="icon_img">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 16 14" class=" "
+          stroke="none" style="font-size: 16px;">
+          <path fill="#fff"
+            d="M16 2.048a6.553 6.553 0 0 1-1.882.528 3.287 3.287 0 0 0 1.438-1.82 6.608 6.608 0 0 1-2.08.803C12.872.901 12.023.519 11.06.519a3.277 3.277 0 0 0-3.265 3.28c0 .26.03.513.084.75a9.326 9.326 0 0 1-6.761-3.426 3.246 3.246 0 0 0-.444 1.644c0 1.14.574 2.15 1.46 2.723a3.245 3.245 0 0 1-1.49-.382v.023a3.284 3.284 0 0 0 2.63 3.22c-.48.131-.986.15-1.476.053a3.274 3.274 0 0 0 3.06 2.28A6.517 6.517 0 0 1 .78 12.09c-.26 0-.52-.016-.78-.046a9.288 9.288 0 0 0 5.033 1.476c6.026 0 9.338-5.002 9.338-9.339 0-.145 0-.283-.008-.428A6.557 6.557 0 0 0 16 2.048Z">
+          </path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 16 17" class=" "
+          stroke="none" style="font-size: 16px;">
+          <path fill="#fff"
+            d="M8.012 0a8.011 8.011 0 0 0-2.92 15.47c-.071-.634-.134-1.605.027-2.298.146-.626.94-3.98.94-3.98S5.818 8.71 5.818 8c0-1.111.646-1.945 1.448-1.945.685 0 1.015.513 1.015 1.128 0 .687-.437 1.715-.663 2.668-.19.797.4 1.446 1.186 1.446 1.422 0 2.518-1.5 2.518-3.667 0-1.912-1.379-3.254-3.347-3.254-2.279 0-3.615 1.713-3.615 3.475 0 .69.264 1.432.595 1.832.066.08.074.15.056.23-.06.251-.195.802-.223.911-.035.15-.115.181-.268.11-.999-.46-1.626-1.923-1.626-3.104 0-2.524 1.837-4.847 5.293-4.847 2.779 0 4.94 1.983 4.94 4.627 0 2.763-1.742 4.987-4.165 4.987-.812 0-1.573-.42-1.843-.922l-.501 1.903c-.18.699-.671 1.572-1.001 2.103A8.015 8.015 0 0 0 16 8.028 8.014 8.014 0 0 0 7.99.018L8.012 0Z">
+          </path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 16 16" class=" "
+          stroke="none" style="font-size: 16px;">
+          <path fill="#fff"
+            d="M8.137.548c.66 0 2.898.184 3.954 2.548.352.795.268 2.146.199 3.231l-.002.04c-.008.12-.015.23-.02.34.05.03.135.06.267.06.2-.01.44-.08.69-.2.11-.06.228-.07.308-.07.122 0 .24.02.34.06.3.1.49.32.49.559.01.299-.26.559-.81.778-.059.02-.139.05-.229.08-.3.09-.76.24-.889.54-.06.149-.04.349.08.578l.01.01c.04.091 1.018 2.317 3.194 2.676.17.03.29.18.28.34 0 .05-.01.1-.03.15-.16.38-.848.658-2.097.847-.04.06-.08.25-.11.38-.019.12-.049.24-.089.369-.05.18-.18.27-.37.27h-.02c-.09 0-.208-.02-.358-.05-.24-.05-.51-.09-.849-.09-.2 0-.4.01-.609.05-.4.07-.748.31-1.148.59-.569.398-1.218.858-2.196.858-.04 0-.08-.01-.12-.01h-.1c-.978 0-1.618-.45-2.186-.859-.399-.28-.738-.52-1.138-.59a4.4 4.4 0 0 0-.618-.049c-.36 0-.639.06-.848.1-.141.028-.261.05-.36.05-.25 0-.35-.15-.39-.28-.04-.129-.06-.26-.09-.379-.03-.12-.07-.33-.11-.38-1.278-.148-1.966-.428-2.126-.817a.4.4 0 0 1-.036-.15.33.33 0 0 1 .28-.34c2.176-.36 3.153-2.586 3.194-2.68l.01-.019c.12-.23.15-.43.08-.58-.13-.289-.59-.438-.888-.539-.081-.019-.16-.049-.231-.079-.738-.29-.838-.62-.798-.849.06-.319.45-.528.779-.528.097 0 .18.019.255.049.28.13.526.2.736.2a.63.63 0 0 0 .31-.07l-.03-.38c-.066-1.083-.15-2.433.204-3.224C4.928.738 7.159.558 7.818.558l.28-.01h.04Z">
+          </path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 12 14" class=" "
+          stroke="none" style="font-size: 16px;">
+          <path fill="#fff"
+            d="M10.023 7.363c.014-1.069.626-2.08 1.596-2.64-.612-.82-1.637-1.34-2.703-1.372-1.138-.112-2.24.64-2.82.64-.591 0-1.483-.629-2.444-.61-1.253.038-2.42.707-3.03 1.735-1.31 2.129-.333 5.258.922 6.979.628.842 1.362 1.784 2.322 1.75.94-.036 1.29-.562 2.424-.562 1.124 0 1.453.562 2.432.541 1.009-.015 1.644-.846 2.25-1.697.45-.6.798-1.264 1.028-1.966-1.185-.47-1.976-1.59-1.977-2.798ZM8.172 2.22c.55-.62.82-1.416.755-2.22-.84.083-1.615.46-2.172 1.055a2.862 2.862 0 0 0-.775 2.138c.84.008 1.666-.359 2.192-.974Z">
+          </path>
+        </svg>
+      </div>
+      <h1 class="bottom_side">100% SECURE PAYMENT</h1>
+      <img src="/assets/images/payment-banner.png" alt="this is img" srcset="">
+    </div>
+    <div class="last_box">
+      <h1>KEEP UP TO DATE</h1>
+      <input type="text" placeholder="Enter Email id"><button>SUBSCRIBE</button>
+
+    </div>
+  </div>
+
+
+  <!-- mobile-footer -->
+
+  <div class="mobile-footer">
+    <ul>
+      <li> <i class="fa fa-home"></i> Home</li>
+      <li><i class="fa fa-shopping-bag"></i>Cart</li>
+      <li><img src="/assets/images/ic-web-tab-category-default-v2.svg" alt="">Categories</li>
+      <li><img src="/assets/images/ic-web-tab-profile-default-v2.svg" alt="">Porfile</li>
+    </ul>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+  <script src="/assets/js/script.js" defer></script>
+
 </body>
+
 </html>
